@@ -48,7 +48,7 @@ function draw() {
   noStroke();
   bar();
   fill('black');
-  rect(width*0.2, width*0.1, 55, stress);
+  rect(width*0.2, width*0.6, 55, stress);
 }
 
 
@@ -56,7 +56,7 @@ function bar()
 {
   push();
   fill('red');
-  rect(width*0.2, width*0.1, 55, 400);
+  rect(width*0.2, width*0.6, 55, 400);
   pop();
 }
 
@@ -69,11 +69,10 @@ function mousePressed() {
   gr = int(random(ghosts.length));
   //make several word variables
   wrds = 'Hey, you\'re that ' + occupation[or] + ' and the same person who ' + action[ar] + ' ' + place[pr] + '!';
-  draw();
   bodyText();
   image(ghosts[gr], width*0.5, width*0.5);
   console.log(wrds);
-  stress = stress - 10;
+  stress = stress - 50;
 }
 
 function mainText() {

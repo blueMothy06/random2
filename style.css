@@ -17,6 +17,12 @@ h1 {
   padding: 40px;
 }
 
+h2 {
+  font-size: 15px;
+  text-align: center;
+  padding: 40px;
+}
+
 #myCanvas canvas{
   display: block;
   margin: auto;
