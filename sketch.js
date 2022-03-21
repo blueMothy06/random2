@@ -15,6 +15,8 @@ let com1;
 let com2;
 let com3;
 
+let myCanvas;
+
 function preload() {
   com1 = loadImage('comment1.png');
   com2 = loadImage('comment2.png');
@@ -23,17 +25,19 @@ function preload() {
   ghosts[1] = loadImage('ghost2.png');
   ghosts[2] = loadImage('ghost3.png');
   ghosts[3] = loadImage('ghost4.png');
+  myFont = loadFont('AnticSlab-Regular.ttf');
 }
 
 function setup() {
-  createCanvas(400, 400);
+  myCanvas = createCanvas(400, 400);
+  myCanvas.parent('myCanvas');
+  textFont(myFont);
   frameRate(60);
   background(0);
   image(com1, width*-0.1, width*0.1);
   image(com2, width*0.5, width*0.5);
   image(com3, width*0.7, 0);
   mainText();
-
 }
 
 function draw() {
@@ -54,6 +58,7 @@ function mousePressed() {
 function mainText() {
   fill(255);
   textAlign(CENTER);
+  textSize(14);
   //this is a lie, you can click anywhere
   text('Wait a second...', width*0.5, height*0.3);
 }
@@ -65,5 +70,5 @@ function bodyText() {
   textAlign(CENTER);
 //  textSize(20);
   textWrap(WORD);
-  text(wrds, width*0.25, height*0.35, width*0.5);
+  text(wrds, width*0.16, height*0.35, width*0.7);
 }
