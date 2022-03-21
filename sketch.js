@@ -16,6 +16,7 @@ let com2;
 let com3;
 
 let myCanvas;
+let stress = 400;
 
 function preload() {
   com1 = loadImage('comment1.png');
@@ -32,7 +33,6 @@ function setup() {
   myCanvas = createCanvas(400, 400);
   myCanvas.parent('myCanvas');
   song = loadSound('crowd.wav');
-//  song.play();
   textFont(myFont);
   frameRate(60);
   background(0);
@@ -40,21 +40,40 @@ function setup() {
   image(com2, width*0.5, width*0.5);
   image(com3, width*0.7, 0);
   mainText();
+
+
 }
 
 function draw() {
+  noStroke();
+  bar();
+  fill('black');
+  rect(width*0.2, width*0.1, 55, stress);
 }
 
+
+function bar()
+{
+  push();
+  fill('red');
+  rect(width*0.2, width*0.1, 55, 400);
+  pop();
+}
+
+
 function mousePressed() {
+  song.play();
   or = int(random(occupation.length));
   ar = int(random(action.length));
   pr = int(random(place.length));
   gr = int(random(ghosts.length));
   //make several word variables
   wrds = 'Hey, you\'re that ' + occupation[or] + ' and the same person who ' + action[ar] + ' ' + place[pr] + '!';
+  draw();
   bodyText();
   image(ghosts[gr], width*0.5, width*0.5);
   console.log(wrds);
+  stress = stress - 10;
 }
 
 function mainText() {
