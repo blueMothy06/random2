@@ -31,6 +31,8 @@ function preload() {
 function setup() {
   myCanvas = createCanvas(400, 400);
   myCanvas.parent('myCanvas');
+  song = loadSound('crowd.wav');
+//  song.play();
   textFont(myFont);
   frameRate(60);
   background(0);
