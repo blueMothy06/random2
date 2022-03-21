@@ -15,12 +15,14 @@ h1 {
   font-size: 20px;
   text-align: center;
   padding: 40px;
+  color: white;
 }
 
 h2 {
   font-size: 15px;
   text-align: center;
-  padding: 40px;
+  padding: 20px;
+  color: white;
 }
 
 #myCanvas canvas{
