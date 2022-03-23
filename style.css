@@ -8,6 +8,7 @@ html, body {
   background-size: cover;
   cursor: url('cursor.png'), auto;
 }
+
 canvas {
   display: block;
 }
@@ -15,14 +16,20 @@ canvas {
 h1 {
   font-size: 20px;
   text-align: center;
-  padding: 40px;
+  padding-top: 40px;
   color: white;
 }
 
 h2 {
-  font-size: 15px;
+  font-size: 17px;
   text-align: center;
   color: white;
+}
+
+p {
+  padding-left: 30%;
+  padding-right: 30%;
+  font-size: 16px;
 }
 
 #myCanvas canvas{
@@ -77,6 +84,11 @@ h2 {
   font-family: 'Antic Slab', serif;
   border-radius: 8px;
   top:11%;
-  margin:0 auto;
-    display:block;
+  margin: auto;
+  display:block;
+}
+
+a {
+  color: red;
+  margin: auto;
 }

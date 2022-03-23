@@ -1,4 +1,4 @@
-let occupation = ['young monarch who was thrown into the role too early','person pretending to be a cook','offical sword-holder','actor who plays the tree','very tired intern who is not getting paid for their efforts','Pixar lamp mascot'];
+let occupation = ['young monarch who was thrown into the role too early','person pretending to be a cook','person who knighted a penguin','actor who plays the tree','very tired intern who is not getting paid for their efforts','part-time Pixar lamp mascot'];
 let action = ['ran away from your responsibilities','tried to fake their death ten years ago, but failed','piloted a T-Rex mecha','saved the world five times, despite trying to destroy it','organized protests to put actual bow ties on penguins','taught the queen how to do the Floss','tried to propose at a friend\'s wedding','managed to find the answer to life while trying to flee for their life'];
 let place = ['back in my grandma\'s attic','in Shangri-la','in Narnia', 'in Camelot','at Hogwarts', 'in Gotham City','in Emerald City','in Neverland','on my roof ten days ago','in my dreams last night'];
 
