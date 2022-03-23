@@ -1,22 +1,49 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <script src="p5.js"></script>
-    <script src="p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&display=swap" rel="stylesheet">
+  <script src="p5.js"></script>
+  <script src="p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-<h1>POV: You're trying to enjoy the scenary but these four random people keep recognizing you from somewhere else</h1>
-<h2>(Click to raise stress level)</h2>
-  <div id = "myCanvas">
-    <script src="sketch.js"></script>
+  <h1>POV: You're trying to enjoy the scenary but these four random people keep recognizing you from somewhere else</h1>
+  <h2>(Click to raise stress level)</h2>
+  <br>
+  <button type="button" onclick="increaseBar()">Click Me</button>
 
+  <!--to keep the bar and canvas on same line-->
+  <div class="flex-container">
+    <div id="overlay">
+    <div id="div2" class="box2"></div>
+      <div id="div1" class="box1"></div>
+    </div>
+
+    <!--js stuff-->
+    <div id="myCanvas">
+      <script src="sketch.js"></script>
+
+      <!--makes the black bar shrink-->
+      <script>
+        function increaseBar() {
+          var element = document.getElementById("div1");
+          var height = element.offsetHeight;
+          var newHeight = height - 100;
+          //can't figure how to make it disappear completely
+          element.style.height = newHeight + 'px';
+        }
+      </script>
+
+    </div>
   </div>
 
 
 </body>
+
 </html>

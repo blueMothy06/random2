@@ -16,7 +16,6 @@ let com2;
 let com3;
 
 let myCanvas;
-let stress = 400;
 
 function preload() {
   com1 = loadImage('comment1.png');
@@ -45,21 +44,7 @@ function setup() {
 }
 
 function draw() {
-  noStroke();
-  bar();
-  fill('black');
-  rect(width*0.2, width*0.6, 55, stress);
 }
-
-
-function bar()
-{
-  push();
-  fill('red');
-  rect(width*0.2, width*0.6, 55, 400);
-  pop();
-}
-
 
 function mousePressed() {
   song.play();
@@ -72,7 +57,6 @@ function mousePressed() {
   bodyText();
   image(ghosts[gr], width*0.5, width*0.5);
   console.log(wrds);
-  stress = stress - 50;
 }
 
 function mainText() {
